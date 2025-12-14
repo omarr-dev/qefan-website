@@ -1,7 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Scale, ChevronDown } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
+import Image from 'next/image';
 
 interface HeroProps {
   translations: {
@@ -38,8 +39,15 @@ export default function Hero({ translations }: HeroProps) {
           transition={{ duration: 0.8 }}
           className="mb-8"
         >
-          <div className="inline-flex items-center justify-center w-20 h-20 md:w-24 md:h-24 rounded-full bg-[var(--accent)]/10 mb-6">
-            <Scale className="w-10 h-10 md:w-12 md:h-12 text-[var(--accent)]" />
+          <div className="inline-flex items-center justify-center mb-6">
+            <Image 
+              src="/qefan-logo.png" 
+              alt="Qefan Logo" 
+              width={400} 
+              height={400} 
+              className="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 object-contain"
+              priority
+            />
           </div>
         </motion.div>
 

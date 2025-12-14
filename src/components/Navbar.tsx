@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Sun, Moon, Languages } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 
 interface NavbarProps {
   locale: 'ar' | 'en';
@@ -68,13 +69,19 @@ export default function Navbar({ locale, setLocale, isDark, setIsDark, translati
             {/* Logo */}
             <a
               href="#"
-              className="text-xl md:text-2xl font-bold text-[var(--accent)]"
+              className="block"
               onClick={(e) => {
                 e.preventDefault();
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
             >
-              {locale === 'ar' ? 'قفان' : 'Qefan'}
+              <Image 
+                src="/qefan-logo.png" 
+                alt={locale === 'ar' ? 'قفان للمحاماة' : 'Qefan Law Firm'} 
+                width={120} 
+                height={40} 
+                className="h-10 md:h-12 w-auto"
+              />
             </a>
 
             {/* Desktop Navigation */}

@@ -1,26 +1,154 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Beige/Cream Color Palette */
+  --beige-50: #faf8f5;
+  --beige-100: #f5f0e8;
+  --beige-200: #e8dfd2;
+  --beige-300: #d4c4ad;
+  --beige-400: #c4a882;
+  --beige-500: #b08d5b;
+  --beige-600: #9a7549;
+  --beige-700: #7d5d3b;
+  --beige-800: #654b30;
+  --beige-900: #4a3622;
+  
+  /* Dark Theme Colors */
+  --dark-50: #f7f7f7;
+  --dark-100: #e3e3e3;
+  --dark-200: #c8c8c8;
+  --dark-300: #a4a4a4;
+  --dark-400: #818181;
+  --dark-500: #666666;
+  --dark-600: #515151;
+  --dark-700: #434343;
+  --dark-800: #383838;
+  --dark-900: #1a1a1a;
+  
+  /* Light Mode */
+  --background: #faf8f5;
+  --background-secondary: #f5f0e8;
+  --foreground: #1a1a1a;
+  --foreground-muted: #666666;
+  --accent: #9a7549;
+  --accent-hover: #7d5d3b;
+  --border: #e8dfd2;
+  --card: #ffffff;
+  --card-hover: #f5f0e8;
+}
+
+.dark {
+  --background: #1a1a1a;
+  --background-secondary: #252525;
+  --foreground: #faf8f5;
+  --foreground-muted: #a4a4a4;
+  --accent: #c4a882;
+  --accent-hover: #d4c4ad;
+  --border: #383838;
+  --card: #252525;
+  --card-hover: #383838;
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-background-secondary: var(--background-secondary);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-foreground-muted: var(--foreground-muted);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-border: var(--border);
+  --color-card: var(--card);
+  --color-card-hover: var(--card-hover);
+  --font-cairo: 'Cairo', sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Cairo', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* RTL Support */
+[dir="rtl"] {
+  text-align: right;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-hover);
+}
+
+/* Marquee animation for logos */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-rtl {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee-rtl {
+  animation: marquee-rtl 30s linear infinite;
+}
+
+/* Section transitions */
+section {
+  opacity: 1;
+}
+
+/* Button hover effects */
+.btn-primary {
+  background: var(--accent);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+/* Card styles */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  background: var(--card-hover);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
 }

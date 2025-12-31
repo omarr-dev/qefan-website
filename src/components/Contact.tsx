@@ -85,7 +85,7 @@ export default function Contact({ translations }: ContactProps) {
             href="https://wa.me/966510107799"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-3 w-full py-4 bg-[#25D366] hover:bg-[#20BD5C] text-white rounded-xl font-semibold transition-colors"
+            className="flex items-center justify-center gap-3 w-full py-4 bg-[var(--accent)] hover:bg-[var(--accent-hover)] text-white rounded-xl font-semibold transition-colors"
           >
             <MessageCircle className="w-6 h-6" />
             {translations.contact.whatsapp}

@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ChevronDown } from 'lucide-react';
 import Image from 'next/image';
 
 interface HeroProps {
@@ -15,13 +14,6 @@ interface HeroProps {
 }
 
 export default function Hero({ translations }: HeroProps) {
-  const scrollToContact = () => {
-    const element = document.querySelector('#contact');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Pattern */}
@@ -64,20 +56,10 @@ export default function Hero({ translations }: HeroProps) {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-lg md:text-xl text-[var(--foreground-muted)] mb-10 max-w-2xl mx-auto"
+          className="text-lg md:text-xl text-[var(--foreground-muted)] max-w-2xl mx-auto"
         >
           {translations.hero.subtitle}
         </motion.p>
-
-        <motion.button
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          onClick={scrollToContact}
-          className="btn-primary px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl"
-        >
-          {translations.hero.cta}
-        </motion.button>
       </div>
 
       {/* Scroll Indicator */}
@@ -87,12 +69,20 @@ export default function Hero({ translations }: HeroProps) {
         transition={{ delay: 1.2 }}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
       >
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ repeat: Infinity, duration: 1.5 }}
-        >
-          <ChevronDown className="w-8 h-8 text-[var(--accent)]" />
-        </motion.div>
+        <div className="relative">
+          {/* Mouse Icon */}
+          <motion.div
+            animate={{ y: [0, 10, 0] }}
+            transition={{ repeat: Infinity, duration: 2.5 }}
+            className="w-6 h-10 border-2 border-foreground-muted rounded-full flex items-start justify-center p-1.5"
+          >
+            <motion.div
+              animate={{ y: [0, 6, 0] }}
+              transition={{ repeat: Infinity, duration: 2.5 }}
+              className="w-2 h-2 bg-foreground-muted rounded-full"
+            />
+          </motion.div>
+        </div>
       </motion.div>
     </section>
   );

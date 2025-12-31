@@ -7,7 +7,6 @@ interface HeroProps {
   translations: {
     hero: {
       title: string;
-      subtitle: string;
       cta: string;
     };
   };
@@ -51,15 +50,6 @@ export default function Hero({ translations }: HeroProps) {
         >
           {translations.hero.title}
         </motion.h1>
-
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-lg md:text-xl text-[var(--foreground-muted)] max-w-2xl mx-auto"
-        >
-          {translations.hero.subtitle}
-        </motion.p>
       </div>
 
       {/* Scroll Indicator */}

@@ -40,11 +40,11 @@ export default function Hero({ translations }: HeroProps) {
           className="mb-8"
         >
           <div className="inline-flex items-center justify-center mb-6">
-            <Image 
-              src="/qefan-logo.png" 
-              alt="Qefan Logo" 
-              width={400} 
-              height={400} 
+            <Image
+              src="/qefan-logo.svg"
+              alt="Qefan Logo"
+              width={400}
+              height={400}
               className="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 object-contain"
               priority
             />

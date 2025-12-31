@@ -5,9 +5,9 @@ export const metadata: Metadata = {
   title: "قفان للمحاماة والاستشارات القانونية | Qefan Law Firm",
   description: "شريكك القانوني المستدام نحو النجاح - Your Sustainable Legal Partner Towards Success",
   icons: {
-    icon: '/qefan-logo.png',
-    shortcut: '/qefan-logo.png',
-    apple: '/qefan-logo.png',
+    icon: '/qefan-logo.svg',
+    shortcut: '/qefan-logo.svg',
+    apple: '/qefan-logo.svg',
   },
 };
 
@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/qefan-logo.png" type="image/png" />
+        <link rel="icon" href="/qefan-logo.svg" type="image/svg+xml" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link

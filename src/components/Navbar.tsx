@@ -75,12 +75,12 @@ export default function Navbar({ locale, setLocale, isDark, setIsDark, translati
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
             >
-              <Image 
-                src="/qefan-logo.png" 
-                alt={locale === 'ar' ? 'قفان للمحاماة' : 'Qefan Law Firm'} 
-                width={120} 
-                height={40} 
-                className="h-10 md:h-12 w-auto"
+              <Image
+                src="/qefan-logo.svg"
+                alt={locale === 'ar' ? 'قفان للمحاماة' : 'Qefan Law Firm'}
+                width={240}
+                height={80}
+                className="h-20 md:h-24 w-auto"
               />
             </a>
 

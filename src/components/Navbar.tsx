@@ -12,9 +12,7 @@ interface NavbarProps {
   translations: {
     nav: {
       about: string;
-      vision: string;
       goals: string;
-      values: string;
       services: string;
       clients: string;
       team: string;
@@ -37,9 +35,7 @@ export default function Navbar({ locale, setLocale, isDark, setIsDark, translati
 
   const navItems = [
     { href: '#about', label: translations.nav.about },
-    { href: '#vision', label: translations.nav.vision },
     { href: '#goals', label: translations.nav.goals },
-    { href: '#values', label: translations.nav.values },
     { href: '#services', label: translations.nav.services },
     { href: '#clients', label: translations.nav.clients },
     { href: '#team', label: translations.nav.team },

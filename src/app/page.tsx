@@ -4,9 +4,7 @@ import { useState, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
-import Vision from '@/components/Vision';
 import Goals from '@/components/Goals';
-import Values from '@/components/Values';
 import Services from '@/components/Services';
 import Clients from '@/components/Clients';
 import Team from '@/components/Team';
@@ -84,9 +82,7 @@ export default function Home() {
       />
       <Hero translations={translations} />
       <About translations={translations} />
-      <Vision translations={translations} />
       <Goals translations={translations} />
-      <Values translations={translations} />
       <Services translations={translations} />
       <Clients translations={translations} locale={locale} />
       <Team translations={translations} />

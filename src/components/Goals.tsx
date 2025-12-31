@@ -28,7 +28,7 @@ export default function Goals({ translations }: GoalsProps) {
   ];
 
   return (
-    <section id="goals" className="py-20 md:py-32 bg-[var(--background-secondary)]">
+    <section id="goals" className="py-20 md:py-32 bg-[var(--background)]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}

@@ -1,28 +1,20 @@
 {
   "nav": {
     "about": "About",
-    "vision": "Vision",
     "goals": "Goals",
-    "values": "Values",
     "services": "Services",
     "clients": "Clients",
     "team": "Team",
     "contact": "Contact"
   },
   "hero": {
-    "title": "Qefan Law Firm & Legal Consultancy",
-    "subtitle": "Your Sustainable Legal Partner Towards Success",
+    "title": "Your Sustainable Legal Partner Towards Success",
+
     "cta": "Contact Us"
   },
   "about": {
     "title": "About Qefan",
     "description": "Qefan Law Firm & Legal Consultancy was established through an alliance of legal expertise in the fields of general and administrative judiciary in the Kingdom of Saudi Arabia, alongside extensive experience working in executive departments in the public, private, and non-profit sectors. These combined experiences have shaped our approach to providing sound legal opinions."
-  },
-  "vision": {
-    "title": "Our Vision",
-    "description": "To be the sustainable legal partner for successful entities.",
-    "missionTitle": "Our Mission",
-    "missionDescription": "To provide our clients with legal services supported by sound advice that fundamentally contributes to the sustainability of their growth and success."
   },
   "goals": {
     "title": "Qefan's Goals",
@@ -30,29 +22,6 @@
     "goal2": "Achieving preventive and sustainable justice for the client",
     "goal3": "Providing services with complete transparency and integrity",
     "goal4": "Professional legal representation for the client"
-  },
-  "values": {
-    "title": "Qefan's Values",
-    "commitment": {
-      "title": "Commitment",
-      "description": "Providing accurate and consistent services according to the highest standards of integrity and compliance"
-    },
-    "integrity": {
-      "title": "Integrity",
-      "description": "Working with independence and fairness while prioritizing client interests within legal frameworks"
-    },
-    "responsibility": {
-      "title": "Social Responsibility",
-      "description": "Contributing to legal awareness and serving the community through voluntary initiatives"
-    },
-    "knowledge": {
-      "title": "Knowledge & Specialization",
-      "description": "Continuous development of our team to keep pace with regulatory and legislative updates"
-    },
-    "trust": {
-      "title": "Trust",
-      "description": "Building relationships based on transparency, honesty, and confidentiality"
-    }
   },
   "services": {
     "title": "Qefan's Services",
@@ -129,15 +98,25 @@
     "subtitle": "Our team includes a group of distinguished specialists",
     "member1": {
       "name": "Ibrahim bin Abdulaziz Al-Hussain",
-      "roles": ["Licensed Lawyer & Founding Partner", "Administrative, Financial & Waqf Legal Consultant", "Arbitrator & Waqf Expert"]
+      "roles": [
+        "Licensed Lawyer & Founding Partner",
+        "Administrative, Financial & Waqf Legal Consultant",
+        "Arbitrator & Waqf Expert"
+      ]
     },
     "member2": {
       "name": "Omar bin Ali Al-Doeelej",
-      "roles": ["Licensed Lawyer & Founding Partner", "Expert in Real Estate Disputes & Partnership Conflicts"]
+      "roles": [
+        "Licensed Lawyer & Founding Partner",
+        "Expert in Real Estate Disputes & Partnership Conflicts"
+      ]
     },
     "member3": {
       "name": "Omar bin Abdulrahman Al-Faifi",
-      "roles": ["Licensed Lawyer & Founding Partner", "Corporate Governance, Risk Management & Compliance Expert"]
+      "roles": [
+        "Licensed Lawyer & Founding Partner",
+        "Corporate Governance, Risk Management & Compliance Expert"
+      ]
     },
     "member4": {
       "name": "Khaled bin Mohammed Al-Harbi",
@@ -145,19 +124,35 @@
     },
     "member5": {
       "name": "Omar bin Abdulaziz Al-Sulaim",
-      "roles": ["Business Development & Oversight Expert", "Former Investigator & Generalizer", "Legal Consultant"]
+      "roles": [
+        "Business Development & Oversight Expert",
+        "Former Investigator & Generalizer",
+        "Legal Consultant"
+      ]
     },
     "member6": {
       "name": "Hisham bin Mohammed Al Sumaih",
-      "roles": ["Legal Consultant", "Member of Legislative & Administrative Committees", "Familiar with Nomo Awards"]
+      "roles": [
+        "Legal Consultant",
+        "Member of Legislative & Administrative Committees",
+        "Familiar with Nomo Awards"
+      ]
     },
     "member7": {
       "name": "Fahad Al-Murshid",
-      "roles": ["Licensed Lawyer", "Governance & Risk Expert", "Legal Consultant in Insurance, Oversight & Maritime"]
+      "roles": [
+        "Licensed Lawyer",
+        "Governance & Risk Expert",
+        "Legal Consultant in Insurance, Oversight & Maritime"
+      ]
     },
     "member8": {
       "name": "Issa Khawaji",
-      "roles": ["Quality Consultant", "Coordination Manager in Third Sector", "Certified Legal & Administrative Trainer"]
+      "roles": [
+        "Quality Consultant",
+        "Coordination Manager in Third Sector",
+        "Certified Legal & Administrative Trainer"
+      ]
     }
   },
   "contact": {
@@ -176,4 +171,3 @@
     "dark": "Dark"
   }
 }
-

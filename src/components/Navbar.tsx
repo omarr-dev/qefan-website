@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Sun, Moon, Languages } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import Image from 'next/image';
 
 interface NavbarProps {
   locale: 'ar' | 'en';
@@ -66,24 +65,6 @@ export default function Navbar({ locale, setLocale, isDark, setIsDark, translati
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 md:h-20">
-            {/* Logo */}
-            <a
-              href="#"
-              className="block"
-              onClick={(e) => {
-                e.preventDefault();
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }}
-            >
-              <Image
-                src="/qefan-logo.svg"
-                alt={locale === 'ar' ? 'قفان للمحاماة' : 'Qefan Law Firm'}
-                width={240}
-                height={80}
-                className="h-20 md:h-24 w-auto"
-              />
-            </a>
-
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center gap-6">
               {navItems.map((item) => (

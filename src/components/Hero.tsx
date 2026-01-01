@@ -14,7 +14,7 @@ interface HeroProps {
 
 export default function Hero({ translations }: HeroProps) {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[100svh] sm:min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[var(--background)]">
         <div className="absolute inset-0 opacity-[0.03]" style={{
@@ -57,7 +57,7 @@ export default function Hero({ translations }: HeroProps) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        className="absolute bottom-5 sm:bottom-8 left-1/2 transform -translate-x-1/2"
       >
         <div className="relative">
           {/* Mouse Icon */}

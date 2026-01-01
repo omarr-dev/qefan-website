@@ -14,7 +14,7 @@ interface HeroProps {
 
 export default function Hero({ translations }: HeroProps) {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[100svh] sm:min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[var(--background)]">
         <div className="absolute inset-0 opacity-[0.03]" style={{
@@ -28,15 +28,15 @@ export default function Hero({ translations }: HeroProps) {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="mb-8 md:mb-10"
+          className="mb-6 sm:mb-8 md:mb-10"
         >
-          <div className="inline-flex items-center justify-center mb-8 md:mb-10">
+          <div className="inline-flex items-center justify-center mb-6 sm:mb-8 md:mb-10">
             <Image
               src="/qefan-logo.svg"
               alt="Qefan Logo"
               width={400}
               height={400}
-              className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-contain"
+              className="w-48 h-48 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-96 lg:h-96 object-contain"
               priority
             />
           </div>
@@ -46,7 +46,7 @@ export default function Hero({ translations }: HeroProps) {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-[var(--foreground)] mb-8 md:mb-6 leading-snug tracking-wide px-2"
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-[var(--foreground)] mb-6 md:mb-6 leading-snug tracking-wide px-2"
         >
           {translations.hero.title}
         </motion.h1>
@@ -57,7 +57,7 @@ export default function Hero({ translations }: HeroProps) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        className="hidden sm:block absolute bottom-8 left-1/2 transform -translate-x-1/2"
       >
         <div className="relative">
           {/* Mouse Icon */}
@@ -77,4 +77,3 @@ export default function Hero({ translations }: HeroProps) {
     </section>
   );
 }
-

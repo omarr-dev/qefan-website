@@ -28,7 +28,7 @@ export default function Hero({ translations }: HeroProps) {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="mb-8 md:mb-10"
+          className="-mt-6 sm:mt-0 mb-8 md:mb-10"
         >
           <div className="inline-flex items-center justify-center mb-8 md:mb-10">
             <Image

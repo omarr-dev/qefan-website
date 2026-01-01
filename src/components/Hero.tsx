@@ -23,20 +23,20 @@ export default function Hero({ translations }: HeroProps) {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+      <div className="relative z-10 text-center px-6 sm:px-8 md:px-4 max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="mb-8"
+          className="mb-8 md:mb-10"
         >
-          <div className="inline-flex items-center justify-center mb-6">
+          <div className="inline-flex items-center justify-center mb-8 md:mb-10">
             <Image
               src="/qefan-logo.svg"
               alt="Qefan Logo"
               width={400}
               height={400}
-              className="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 object-contain"
+              className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-contain"
               priority
             />
           </div>
@@ -46,7 +46,7 @@ export default function Hero({ translations }: HeroProps) {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--foreground)] mb-6 leading-tight"
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-[var(--foreground)] mb-8 md:mb-6 leading-snug tracking-wide px-2"
         >
           {translations.hero.title}
         </motion.h1>

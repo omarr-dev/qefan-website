@@ -123,6 +123,10 @@ body {
   animation: marquee-rtl 30s linear infinite;
 }
 
+.animate-marquee-reverse {
+  animation: marquee-rtl 30s linear infinite;
+}
+
 /* Section transitions */
 section {
   opacity: 1;

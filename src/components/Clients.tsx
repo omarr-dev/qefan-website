@@ -14,12 +14,22 @@ interface ClientsProps {
 }
 
 const clientLogos = [
-  { src: '/logos/شعار افنزور .jpg', alt: 'Afanzur' },
-  { src: '/logos/شعار الماجديه .jpg', alt: 'Al Majdiah' },
-  { src: '/logos/شعار تخير .jpg', alt: 'Takhir' },
-  { src: '/logos/شعار ركيز .jpg', alt: 'Rakeez' },
-  { src: '/logos/شعار سقيفه .jpg', alt: 'Saqeefah' },
   { src: '/logos/شعار مسكن رخاء.jpg', alt: 'Maskan Rakhaa' },
+  { src: '/logos/Rakhaa logo.svg', alt: 'Rakhaa' },
+  { src: '/logos/logo drb.jpeg', alt: 'DRB' },
+  { src: '/logos/logo stayel.jpeg', alt: 'Stayel' },
+  { src: '/logos/sqygah logo.jpeg', alt: 'Sqygah' },
+  { src: '/logos/PPI LOGO .svg', alt: 'PPI' },
+  { src: '/logos/logio sab.jpeg', alt: 'SAB' },
+  { src: '/logos/awqaf logo.jpeg', alt: 'Awqaf' },
+  { src: '/logos/Diri logo final.svg', alt: 'Diri' },
+  { src: '/logos/logo almajdya.jpeg', alt: 'Al Majdiah' },
+  { src: '/logos/quality move  (1).svg', alt: 'Quality Move' },
+  { src: '/logos/logo 11-23 final PNG.png', alt: 'Client' },
+  { src: '/logos/طولي رسمي.svg', alt: 'Touly' },
+  { src: '/logos/Artboard 1.svg', alt: 'Client' },
+  { src: '/logos/PHOTO-2025-11-24-10-18-38.jpg.jpeg', alt: 'Client' },
+  { src: '/logos/logo for qefan.jpeg', alt: 'Qefan' },
 ];
 
 export default function Clients({ translations, locale }: ClientsProps) {
@@ -61,14 +71,14 @@ export default function Clients({ translations, locale }: ClientsProps) {
             {duplicatedLogos.map((logo, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 w-32 h-32 md:w-40 md:h-40 bg-white rounded-2xl shadow-md flex items-center justify-center p-4 hover:shadow-lg transition-shadow"
+                className="flex-shrink-0 w-36 h-36 md:w-44 md:h-44 bg-white rounded-2xl shadow-lg flex items-center justify-center p-5 hover:shadow-xl hover:scale-105 transition-all duration-300 border border-gray-100"
               >
                 <Image
                   src={logo.src}
                   alt={logo.alt}
-                  width={120}
-                  height={120}
-                  className="object-contain max-w-full max-h-full"
+                  width={140}
+                  height={140}
+                  className="object-contain max-w-full max-h-full grayscale hover:grayscale-0 transition-all duration-300"
                 />
               </div>
             ))}
@@ -78,4 +88,3 @@ export default function Clients({ translations, locale }: ClientsProps) {
     </section>
   );
 }
-

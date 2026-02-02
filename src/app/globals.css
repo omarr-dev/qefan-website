@@ -59,7 +59,7 @@
   --color-border: var(--border);
   --color-card: var(--card);
   --color-card-hover: var(--card-hover);
-  --font-cairo: 'Cairo', sans-serif;
+  --font-primary: 'IBM Plex Sans', 'IBM Plex Sans Arabic', sans-serif;
 }
 
 * {
@@ -69,7 +69,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Cairo', sans-serif;
+  font-family: 'IBM Plex Sans', 'IBM Plex Sans Arabic', sans-serif;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 

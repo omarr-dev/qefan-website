@@ -8,6 +8,7 @@ interface ClientsProps {
   translations: {
     clients: {
       title: string;
+      subtitle: string;
     };
   };
   locale: 'ar' | 'en';
@@ -52,6 +53,9 @@ export default function Clients({ translations, locale }: ClientsProps) {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--foreground)]">
             {translations.clients.title}
           </h2>
+          <p className="mt-4 text-lg md:text-xl text-[var(--muted-foreground)]">
+            {translations.clients.subtitle}
+          </p>
         </motion.div>
       </div>
 

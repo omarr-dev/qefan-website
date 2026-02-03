@@ -91,14 +91,14 @@ export default function Clients({ translations }: ClientsProps) {
             {duplicatedLogosRow1.map((logo, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 w-36 h-36 md:w-44 md:h-44 bg-card rounded-2xl shadow-lg dark:shadow-black/20 flex items-center justify-center p-5 hover:shadow-xl dark:hover:shadow-black/30 hover:scale-105 transition-all duration-300 border border-border"
+                className="flex-shrink-0 w-36 h-36 md:w-44 md:h-44 bg-[var(--dark-900)] dark:bg-card rounded-2xl shadow-lg dark:shadow-black/20 flex items-center justify-center p-5 hover:shadow-xl dark:hover:shadow-black/30 hover:scale-105 transition-all duration-300 border border-border"
               >
                 <Image
                   src={logo.src}
                   alt={logo.alt}
                   width={140}
                   height={140}
-                  className="object-contain max-w-full max-h-full grayscale hover:grayscale-0 transition-all duration-300 dark:mix-blend-lighten dark:invert"
+                  className="object-contain max-w-full max-h-full grayscale hover:grayscale-0 transition-all duration-300 brightness-0 invert dark:brightness-0 dark:invert"
                 />
               </div>
             ))}
@@ -124,7 +124,7 @@ export default function Clients({ translations }: ClientsProps) {
                   alt={logo.alt}
                   width={140}
                   height={140}
-                  className="object-contain max-w-full max-h-full grayscale hover:grayscale-0 transition-all duration-300 dark:mix-blend-lighten dark:invert"
+                  className="object-contain max-w-full max-h-full grayscale hover:grayscale-0 transition-all duration-300 dark:brightness-0 dark:invert"
                 />
               </div>
             ))}

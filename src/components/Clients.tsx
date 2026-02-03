@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
-import Image from 'next/image';
+import { motion, useInView } from "framer-motion";
+import Image from "next/image";
+import { useRef } from "react";
 
 interface ClientsProps {
   translations: {
@@ -14,25 +14,25 @@ interface ClientsProps {
 }
 
 const clientLogosRow1 = [
-  { src: '/logos/شعار مسكن رخاء.jpg', alt: 'Maskan Rakhaa' },
-  { src: '/logos/Rakhaa logo.svg', alt: 'Rakhaa' },
-  { src: '/logos/logo drb.jpeg', alt: 'DRB' },
-  { src: '/logos/logo stayel.jpeg', alt: 'Stayel' },
-  { src: '/logos/sqygah logo.jpeg', alt: 'Sqygah' },
-  { src: '/logos/PPI LOGO .svg', alt: 'PPI' },
-  { src: '/logos/logio sab.jpeg', alt: 'SAB' },
-  { src: '/logos/awqaf logo.jpeg', alt: 'Awqaf' },
+  { src: "/logos/jpg.png", alt: "Maskan Rakhaa" },
+  { src: "/logos/2024-05-156.46.42.png", alt: "Rakhaa" },
+  { src: "/logos/logodrb.png", alt: "DRB" },
+  { src: "/logos/logostayel.png", alt: "Stayel" },
+  { src: "/logos/sqygahlogo.png", alt: "Sqygah" },
+  { src: "/logos/PPI LOGO .svg", alt: "PPI" },
+  { src: "/logos/logiosab.png", alt: "SAB" },
+  { src: "/logos/awqaflogo.png", alt: "Awqaf" },
 ];
 
 const clientLogosRow2 = [
-  { src: '/logos/Diri logo final.svg', alt: 'Diri' },
-  { src: '/logos/logo almajdya.jpeg', alt: 'Al Majdiah' },
-  { src: '/logos/quality move  (1).svg', alt: 'Quality Move' },
-  { src: '/logos/logo 11-23 final PNG.png', alt: 'Client' },
-  { src: '/logos/طولي رسمي.svg', alt: 'Touly' },
-  { src: '/logos/Artboard 1.svg', alt: 'Client' },
-  { src: '/logos/PHOTO-2025-11-24-10-18-38.jpg.jpeg', alt: 'Client' },
-  { src: '/logos/logo for qefan.jpeg', alt: 'Qefan' },
+  { src: "/logos/Diri logo final.svg", alt: "Diri" },
+  { src: "/logos/الماجدية.png", alt: "Al Majdiah" },
+  { src: "/logos/quality move  (1).svg", alt: "Quality Move" },
+  { src: "/logos/logo 11-23 final PNG.png", alt: "Client" },
+  { src: "/logos/طولي رسمي.svg", alt: "Touly" },
+  { src: "/logos/Artboard 1.svg", alt: "Client" },
+  { src: "/logos/PHOTO-2025-11-24-10-18-38.png", alt: "Client" },
+  { src: "/logos/abc.png", alt: "Qefan" },
 ];
 
 export default function Clients({ translations }: ClientsProps) {
@@ -44,7 +44,10 @@ export default function Clients({ translations }: ClientsProps) {
   const duplicatedLogosRow2 = [...clientLogosRow2, ...clientLogosRow2];
 
   return (
-    <section id="clients" className="py-20 md:py-32 bg-[var(--background)] overflow-hidden">
+    <section
+      id="clients"
+      className="py-20 md:py-32 bg-[var(--background)] overflow-hidden"
+    >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
@@ -86,7 +89,7 @@ export default function Clients({ translations }: ClientsProps) {
                   alt={logo.alt}
                   width={140}
                   height={140}
-                  className="object-contain max-w-full max-h-full grayscale hover:grayscale-0 transition-all duration-300"
+                  className="object-contain max-w-full max-h-full grayscale hover:grayscale-0 transition-all duration-300 dark:mix-blend-lighten dark:invert"
                 />
               </div>
             ))}
@@ -112,7 +115,7 @@ export default function Clients({ translations }: ClientsProps) {
                   alt={logo.alt}
                   width={140}
                   height={140}
-                  className="object-contain max-w-full max-h-full grayscale hover:grayscale-0 transition-all duration-300"
+                  className="object-contain max-w-full max-h-full grayscale hover:grayscale-0 transition-all duration-300 dark:mix-blend-lighten dark:invert"
                 />
               </div>
             ))}

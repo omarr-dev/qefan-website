@@ -11,7 +11,6 @@ interface ClientsProps {
       subtitle: string;
     };
   };
-  locale: 'ar' | 'en';
 }
 
 const clientLogosRow1 = [
@@ -36,7 +35,7 @@ const clientLogosRow2 = [
   { src: '/logos/logo for qefan.jpeg', alt: 'Qefan' },
 ];
 
-export default function Clients({ translations, locale }: ClientsProps) {
+export default function Clients({ translations }: ClientsProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -70,12 +69,13 @@ export default function Clients({ translations, locale }: ClientsProps) {
         <div className="absolute right-0 top-0 bottom-0 w-20 md:w-40 bg-gradient-to-l from-[var(--background)] to-transparent z-10" />
 
         <motion.div
+          dir="ltr"
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.8, delay: 0.3 }}
           className="flex"
         >
-          <div className={`flex gap-8 md:gap-12 ${locale === 'ar' ? 'animate-marquee-rtl' : 'animate-marquee'}`}>
+          <div className="flex gap-8 md:gap-12 animate-marquee">
             {duplicatedLogosRow1.map((logo, index) => (
               <div
                 key={index}
@@ -95,12 +95,13 @@ export default function Clients({ translations, locale }: ClientsProps) {
 
         {/* Second Row - Scrolls in opposite direction */}
         <motion.div
+          dir="ltr"
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.8, delay: 0.5 }}
           className="flex mt-8"
         >
-          <div className={`flex gap-8 md:gap-12 ${locale === 'ar' ? 'animate-marquee-rtl' : 'animate-marquee'}`}>
+          <div className="flex gap-8 md:gap-12 animate-marquee-reverse">
             {duplicatedLogosRow2.map((logo, index) => (
               <div
                 key={`row2-${index}`}

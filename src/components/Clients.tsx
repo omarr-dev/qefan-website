@@ -79,7 +79,7 @@ export default function Clients({ translations }: ClientsProps) {
             {duplicatedLogosRow1.map((logo, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 w-36 h-36 md:w-44 md:h-44 bg-white rounded-2xl shadow-lg flex items-center justify-center p-5 hover:shadow-xl hover:scale-105 transition-all duration-300 border border-gray-100"
+                className="flex-shrink-0 w-36 h-36 md:w-44 md:h-44 bg-card rounded-2xl shadow-lg dark:shadow-black/20 flex items-center justify-center p-5 hover:shadow-xl dark:hover:shadow-black/30 hover:scale-105 transition-all duration-300 border border-border"
               >
                 <Image
                   src={logo.src}
@@ -105,7 +105,7 @@ export default function Clients({ translations }: ClientsProps) {
             {duplicatedLogosRow2.map((logo, index) => (
               <div
                 key={`row2-${index}`}
-                className="flex-shrink-0 w-36 h-36 md:w-44 md:h-44 bg-white rounded-2xl shadow-lg flex items-center justify-center p-5 hover:shadow-xl hover:scale-105 transition-all duration-300 border border-gray-100"
+                className="flex-shrink-0 w-36 h-36 md:w-44 md:h-44 bg-card rounded-2xl shadow-lg dark:shadow-black/20 flex items-center justify-center p-5 hover:shadow-xl dark:hover:shadow-black/30 hover:scale-105 transition-all duration-300 border border-border"
               >
                 <Image
                   src={logo.src}

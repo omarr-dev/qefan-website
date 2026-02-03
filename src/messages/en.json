@@ -161,7 +161,9 @@
     "subtitle": "To contact Qefan Law Firm & Legal Consultancy",
     "phone": "Phone Number",
     "email": "Email",
-    "whatsapp": "Chat on WhatsApp"
+    "whatsapp": "Chat on WhatsApp",
+    "location": "Location",
+    "address": "King Abdulaziz Road, Al Yasmin, Riyadh 13322"
   },
   "footer": {
     "rights": "All Rights Reserved",

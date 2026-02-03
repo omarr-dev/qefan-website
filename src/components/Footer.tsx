@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { Phone, Mail } from 'lucide-react';
+import { Phone, Mail, MapPin } from 'lucide-react';
 
 interface FooterProps {
   translations: {
@@ -20,6 +20,8 @@ interface FooterProps {
     contact: {
       phone: string;
       email: string;
+      location: string;
+      address: string;
     };
   };
 }
@@ -101,9 +103,19 @@ export default function Footer({ translations }: FooterProps) {
                 <Mail size={14} />
                 <span>info@qefanlawfirm.com</span>
               </a>
+              <a
+                href="https://maps.app.goo.gl/AwRiCLAsqJunpe779"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center md:justify-end gap-2 text-sm text-[var(--foreground-muted)] hover:text-[var(--accent)] transition-colors"
+              >
+                <MapPin size={14} />
+                <span>{translations.contact.address}</span>
+              </a>
             </div>
           </div>
         </div>
+
       </div>
 
       {/* Bottom Bar */}

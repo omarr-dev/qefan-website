@@ -84,10 +84,14 @@ export default function Home() {
       <About translations={translations} />
       <Goals translations={translations} />
       <Services translations={translations} />
-      <Clients translations={translations} locale={locale} />
+      <Clients translations={translations} />
       <Team translations={translations} />
       <Contact translations={translations} />
-      <Footer translations={translations} />
+      <Footer translations={{
+          footer: translations.footer,
+          nav: translations.nav,
+          contact: translations.contact
+        }} />
       <WhatsAppButton />
     </main>
   );

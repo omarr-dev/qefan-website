@@ -28,8 +28,12 @@ export default function Goals({ translations }: GoalsProps) {
   ];
 
   return (
-    <section id="goals" className="py-20 md:py-32 bg-[var(--background)]">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="goals" className="relative py-20 md:py-32 bg-[var(--background)] overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute -top-32 right-1/4 w-64 h-64 bg-[var(--accent)]/5 rounded-full blur-3xl" />
+      <div className="absolute -bottom-32 left-1/4 w-64 h-64 bg-[var(--accent)]/5 rounded-full blur-3xl" />
+
+      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
@@ -40,6 +44,12 @@ export default function Goals({ translations }: GoalsProps) {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--foreground)]">
             {translations.goals.title}
           </h2>
+          <motion.div
+            initial={{ scaleX: 0 }}
+            animate={isInView ? { scaleX: 1 } : {}}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="h-1 w-24 bg-gradient-to-r from-[var(--accent)] to-[var(--accent)]/30 mx-auto mt-4 rounded-full"
+          />
         </motion.div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">

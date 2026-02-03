@@ -36,8 +36,13 @@ export default function Contact({ translations }: ContactProps) {
   ];
 
   return (
-    <section id="contact" className="py-20 md:py-32 bg-[var(--background)]">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="relative py-20 md:py-32 bg-[var(--background)] overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[var(--accent)]/20 to-transparent" />
+      <div className="absolute top-1/2 -translate-y-1/2 -right-48 w-96 h-96 bg-[var(--accent)]/5 rounded-full blur-3xl" />
+      <div className="absolute top-1/2 -translate-y-1/2 -left-48 w-96 h-96 bg-[var(--accent)]/5 rounded-full blur-3xl" />
+
+      <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
@@ -48,6 +53,12 @@ export default function Contact({ translations }: ContactProps) {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--foreground)] mb-4">
             {translations.contact.title}
           </h2>
+          <motion.div
+            initial={{ scaleX: 0 }}
+            animate={isInView ? { scaleX: 1 } : {}}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="h-1 w-24 bg-gradient-to-r from-[var(--accent)] to-[var(--accent)]/30 mx-auto mb-4 rounded-full"
+          />
           <p className="text-lg text-[var(--foreground-muted)]">
             {translations.contact.subtitle}
           </p>

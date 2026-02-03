@@ -66,8 +66,13 @@ export default function Services({ translations }: ServicesProps) {
   ];
 
   return (
-    <section id="services" className="py-20 md:py-32 bg-[var(--background-secondary)]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="services" className="relative py-20 md:py-32 bg-[var(--background-secondary)] overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[var(--accent)]/20 to-transparent" />
+      <div className="absolute top-1/4 -right-32 w-64 h-64 bg-[var(--accent)]/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 -left-32 w-64 h-64 bg-[var(--accent)]/5 rounded-full blur-3xl" />
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
@@ -78,6 +83,12 @@ export default function Services({ translations }: ServicesProps) {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--foreground)]">
             {translations.services.title}
           </h2>
+          <motion.div
+            initial={{ scaleX: 0 }}
+            animate={isInView ? { scaleX: 1 } : {}}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="h-1 w-24 bg-gradient-to-r from-[var(--accent)] to-[var(--accent)]/30 mx-auto mt-4 rounded-full"
+          />
         </motion.div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 md:gap-6">

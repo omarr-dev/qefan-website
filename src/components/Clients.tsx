@@ -46,8 +46,11 @@ export default function Clients({ translations }: ClientsProps) {
   return (
     <section
       id="clients"
-      className="py-20 md:py-32 bg-[var(--background)] overflow-hidden"
+      className="relative py-20 md:py-32 bg-[var(--background)] overflow-hidden"
     >
+      {/* Decorative top border */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[var(--accent)]/20 to-transparent" />
+
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
@@ -59,7 +62,13 @@ export default function Clients({ translations }: ClientsProps) {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--foreground)]">
             {translations.clients.title}
           </h2>
-          <p className="mt-4 text-lg md:text-xl text-[var(--muted-foreground)]">
+          <motion.div
+            initial={{ scaleX: 0 }}
+            animate={isInView ? { scaleX: 1 } : {}}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="h-1 w-24 bg-gradient-to-r from-[var(--accent)] to-[var(--accent)]/30 mx-auto mt-4 mb-4 rounded-full"
+          />
+          <p className="text-lg md:text-xl text-[var(--foreground-muted)]">
             {translations.clients.subtitle}
           </p>
         </motion.div>

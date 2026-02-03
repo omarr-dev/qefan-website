@@ -1,64 +1,64 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import Navbar from '@/components/Navbar';
-import Hero from '@/components/Hero';
-import About from '@/components/About';
-import Goals from '@/components/Goals';
-import Services from '@/components/Services';
-import Clients from '@/components/Clients';
-import Team from '@/components/Team';
-import Contact from '@/components/Contact';
-import Footer from '@/components/Footer';
-import WhatsAppButton from '@/components/WhatsAppButton';
+import About from "@/components/About";
+import Clients from "@/components/Clients";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
+import Goals from "@/components/Goals";
+import Hero from "@/components/Hero";
+import Navbar from "@/components/Navbar";
+import Services from "@/components/Services";
+import Team from "@/components/Team";
+import WhatsAppButton from "@/components/WhatsAppButton";
+import { useEffect, useState } from "react";
 
-import arTranslations from '@/messages/ar.json';
-import enTranslations from '@/messages/en.json';
+import arTranslations from "@/messages/ar.json";
+import enTranslations from "@/messages/en.json";
 
-type Locale = 'ar' | 'en';
+type Locale = "ar" | "en";
 
 export default function Home() {
-  const [locale, setLocale] = useState<Locale>('ar');
-  const [isDark, setIsDark] = useState(false);
+  const [locale, setLocale] = useState<Locale>("ar");
+  const [isDark, setIsDark] = useState(true);
   const [mounted, setMounted] = useState(false);
 
-  const translations = locale === 'ar' ? arTranslations : enTranslations;
+  const translations = locale === "ar" ? arTranslations : enTranslations;
 
   useEffect(() => {
     setMounted(true);
-    
+
     // Check for saved preferences
-    const savedLocale = localStorage.getItem('locale') as Locale;
-    const savedTheme = localStorage.getItem('theme');
-    
+    const savedLocale = localStorage.getItem("locale") as Locale;
+    const savedTheme = localStorage.getItem("theme");
+
     if (savedLocale) {
       setLocale(savedLocale);
     }
-    
-    if (savedTheme === 'dark') {
+
+    if (savedTheme === "dark") {
       setIsDark(true);
-    } else if (savedTheme === 'light') {
+    } else if (savedTheme === "light") {
       setIsDark(false);
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       setIsDark(true);
     }
   }, []);
 
   useEffect(() => {
     if (mounted) {
-      localStorage.setItem('locale', locale);
+      localStorage.setItem("locale", locale);
       document.documentElement.lang = locale;
-      document.documentElement.dir = locale === 'ar' ? 'rtl' : 'ltr';
+      document.documentElement.dir = locale === "ar" ? "rtl" : "ltr";
     }
   }, [locale, mounted]);
 
   useEffect(() => {
     if (mounted) {
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      localStorage.setItem("theme", isDark ? "dark" : "light");
       if (isDark) {
-        document.documentElement.classList.add('dark');
+        document.documentElement.classList.add("dark");
       } else {
-        document.documentElement.classList.remove('dark');
+        document.documentElement.classList.remove("dark");
       }
     }
   }, [isDark, mounted]);
@@ -87,11 +87,13 @@ export default function Home() {
       <Clients translations={translations} />
       <Team translations={translations} />
       <Contact translations={translations} />
-      <Footer translations={{
+      <Footer
+        translations={{
           footer: translations.footer,
           nav: translations.nav,
-          contact: translations.contact
-        }} />
+          contact: translations.contact,
+        }}
+      />
       <WhatsAppButton />
     </main>
   );

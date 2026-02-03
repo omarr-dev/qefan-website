@@ -14,7 +14,7 @@ interface ClientsProps {
   locale: 'ar' | 'en';
 }
 
-const clientLogos = [
+const clientLogosRow1 = [
   { src: '/logos/شعار مسكن رخاء.jpg', alt: 'Maskan Rakhaa' },
   { src: '/logos/Rakhaa logo.svg', alt: 'Rakhaa' },
   { src: '/logos/logo drb.jpeg', alt: 'DRB' },
@@ -23,6 +23,9 @@ const clientLogos = [
   { src: '/logos/PPI LOGO .svg', alt: 'PPI' },
   { src: '/logos/logio sab.jpeg', alt: 'SAB' },
   { src: '/logos/awqaf logo.jpeg', alt: 'Awqaf' },
+];
+
+const clientLogosRow2 = [
   { src: '/logos/Diri logo final.svg', alt: 'Diri' },
   { src: '/logos/logo almajdya.jpeg', alt: 'Al Majdiah' },
   { src: '/logos/quality move  (1).svg', alt: 'Quality Move' },
@@ -38,7 +41,8 @@ export default function Clients({ translations, locale }: ClientsProps) {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   // Duplicate logos for seamless infinite scroll
-  const duplicatedLogos = [...clientLogos, ...clientLogos];
+  const duplicatedLogosRow1 = [...clientLogosRow1, ...clientLogosRow1];
+  const duplicatedLogosRow2 = [...clientLogosRow2, ...clientLogosRow2];
 
   return (
     <section id="clients" className="py-20 md:py-32 bg-[var(--background)] overflow-hidden">
@@ -72,9 +76,34 @@ export default function Clients({ translations, locale }: ClientsProps) {
           className="flex"
         >
           <div className={`flex gap-8 md:gap-12 ${locale === 'ar' ? 'animate-marquee-rtl' : 'animate-marquee'}`}>
-            {duplicatedLogos.map((logo, index) => (
+            {duplicatedLogosRow1.map((logo, index) => (
               <div
                 key={index}
+                className="flex-shrink-0 w-36 h-36 md:w-44 md:h-44 bg-white rounded-2xl shadow-lg flex items-center justify-center p-5 hover:shadow-xl hover:scale-105 transition-all duration-300 border border-gray-100"
+              >
+                <Image
+                  src={logo.src}
+                  alt={logo.alt}
+                  width={140}
+                  height={140}
+                  className="object-contain max-w-full max-h-full grayscale hover:grayscale-0 transition-all duration-300"
+                />
+              </div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Second Row - Scrolls in opposite direction */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className="flex mt-8"
+        >
+          <div className={`flex gap-8 md:gap-12 ${locale === 'ar' ? 'animate-marquee-rtl' : 'animate-marquee'}`}>
+            {duplicatedLogosRow2.map((logo, index) => (
+              <div
+                key={`row2-${index}`}
                 className="flex-shrink-0 w-36 h-36 md:w-44 md:h-44 bg-white rounded-2xl shadow-lg flex items-center justify-center p-5 hover:shadow-xl hover:scale-105 transition-all duration-300 border border-gray-100"
               >
                 <Image

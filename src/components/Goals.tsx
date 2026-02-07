@@ -59,7 +59,7 @@ export default function Goals({ translations }: GoalsProps) {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.1 * index }}
-              className="card rounded-2xl p-6 text-center"
+              className="card-static rounded-2xl p-6 text-center"
             >
               <div className="w-14 h-14 rounded-full bg-[var(--accent)]/10 flex items-center justify-center mx-auto mb-4">
                 <goal.icon className="w-7 h-7 text-[var(--accent)]" />

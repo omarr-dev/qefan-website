@@ -85,24 +85,21 @@ export default function Team({ translations }: TeamProps) {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.05 * index }}
-              className="group"
             >
-              <div className="card rounded-2xl p-6 text-center h-full relative overflow-hidden">
-                {/* Hover gradient effect */}
-                <div className="absolute inset-0 bg-gradient-to-b from-[var(--accent)]/0 to-[var(--accent)]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="card-static rounded-2xl p-6 text-center h-full relative overflow-hidden">
 
                 <div className="relative">
                   {/* Professional avatar with initials */}
                   <div className="relative w-20 h-20 mx-auto mb-4">
-                    <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[var(--accent)] to-[var(--accent-hover)] opacity-20 group-hover:opacity-30 transition-opacity" />
-                    <div className="absolute inset-1 rounded-full bg-[var(--card)] border-2 border-[var(--accent)]/20 group-hover:border-[var(--accent)]/40 transition-colors flex items-center justify-center">
+                    <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[var(--accent)] to-[var(--accent-hover)] opacity-20" />
+                    <div className="absolute inset-1 rounded-full bg-[var(--card)] border-2 border-[var(--accent)]/20 flex items-center justify-center">
                       <span className="text-xl font-bold text-[var(--accent)]">
                         {getInitials(member.name)}
                       </span>
                     </div>
                   </div>
 
-                  <h3 className="text-lg font-bold text-[var(--foreground)] mb-3 group-hover:text-[var(--accent)] transition-colors">
+                  <h3 className="text-lg font-bold text-[var(--foreground)] mb-3">
                     {member.name}
                   </h3>
 

@@ -198,6 +198,18 @@ section {
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
 }
 
+/* Static card - no hover effects (for non-interactive content) */
+.card-static {
+  background: var(--card);
+  border: 1px solid var(--border);
+}
+
+.card-static:hover {
+  /* No hover effects - stays static */
+  transform: none;
+  box-shadow: none;
+}
+
 /* Selection styles */
 ::selection {
   background: var(--accent);

@@ -1,6 +1,9 @@
 @import "tailwindcss";
 
 :root {
+  /* Force light color scheme regardless of system preference */
+  color-scheme: light only;
+  
   /* Beige/Cream Color Palette */
   --beige-50: #faf8f5;
   --beige-100: #f5f0e8;

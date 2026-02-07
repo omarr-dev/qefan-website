@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Make dark: variant depend on .dark class, NOT system preference */
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   /* Force light color scheme regardless of system preference */
   color-scheme: light only;
@@ -40,7 +43,9 @@
   --card-hover: #f5f0e8;
 }
 
+/* Dark Mode - Applied via class toggle, NOT system preference */
 .dark {
+  color-scheme: dark;
   --background: #1a1a1a;
   --background-secondary: #252525;
   --foreground: #faf8f5;

@@ -98,7 +98,7 @@ export default function Clients({ translations }: ClientsProps) {
                   alt={logo.alt}
                   width={140}
                   height={140}
-                  className="object-contain max-w-full max-h-full grayscale hover:grayscale-0 transition-all duration-300 dark:mix-blend-lighten dark:invert"
+                  className="object-contain max-w-full max-h-full grayscale hover:grayscale-0 transition-all duration-300 dark:brightness-0 dark:invert"
                 />
               </div>
             ))}
@@ -124,7 +124,7 @@ export default function Clients({ translations }: ClientsProps) {
                   alt={logo.alt}
                   width={140}
                   height={140}
-                  className="object-contain max-w-full max-h-full grayscale hover:grayscale-0 transition-all duration-300 dark:mix-blend-lighten dark:invert"
+                  className="object-contain max-w-full max-h-full grayscale hover:grayscale-0 transition-all duration-300 dark:brightness-0 dark:invert"
                 />
               </div>
             ))}

@@ -124,15 +124,15 @@ body {
 }
 
 .animate-marquee {
-  animation: marquee 30s linear infinite;
+  animation: marquee 24s linear infinite;
 }
 
 .animate-marquee-rtl {
-  animation: marquee-rtl 30s linear infinite;
+  animation: marquee-rtl 24s linear infinite;
 }
 
 .animate-marquee-reverse {
-  animation: marquee-rtl 30s linear infinite;
+  animation: marquee-rtl 24s linear infinite;
 }
 
 /* Section transitions */

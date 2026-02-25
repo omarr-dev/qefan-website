@@ -13,6 +13,7 @@ import {
   GitMerge,
   Scale,
   ScrollText,
+  LandPlot,
   X,
   Users,
   ListChecks,
@@ -43,6 +44,7 @@ interface ServicesProps {
       service8: ServiceTranslation;
       service9: ServiceTranslation;
       service10: ServiceTranslation;
+      service11: ServiceTranslation;
     };
   };
 }
@@ -63,6 +65,7 @@ export default function Services({ translations }: ServicesProps) {
     { icon: GitMerge, ...translations.services.service8 },
     { icon: Scale, ...translations.services.service9 },
     { icon: ScrollText, ...translations.services.service10 },
+    { icon: LandPlot, ...translations.services.service11 },
   ];
 
   return (

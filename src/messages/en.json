@@ -88,6 +88,12 @@
       "description": "Qefan's team takes pride in its expertise in drafting legislation and governing executive department policies across all sectors, and drafting policies and procedural guides that regulate executive department operations in all their technical specializations.",
       "audience": "Local and foreign companies, Board members and executive experts, Non-profit entities",
       "outputs": "Providing procedurally comprehensive services according to best international practices, Activating advanced technical means to expedite procedures, Decision-making with complete transparency and integrity, Maintaining confidentiality through specialized secretaries"
+    },
+    "service11": {
+      "title": "White Land Fees & Vacant Real Estate Program",
+      "description": "A specialized legal and consultancy service for managing and handling obligations related to the White Land Fees system, including studying the land's status and assessing its liability for fees, preparing and submitting objections and grievances to the competent authorities, requesting statutory extensions, and handling cases related to financed or mortgaged lands with banks and financing entities, with follow-up before the competent authorities to reduce financial obligations or cancel fees when regulatory justifications exist. Our practical experience has resulted in recovering more than 250 million SAR for our clients, serving more than 50 clients from individuals and companies, with success in obtaining approval for more than 80 extension requests on invoices.",
+      "audience": "Land owners within urban boundaries subject to the regulation, Real estate sector investors, Real estate development and investment companies, Holding companies owning real estate portfolios, Partners or heirs in joint lands, Owners of financed or mortgaged lands with banks and financing entities",
+      "outputs": "Legal study of the property's status and its liability for fees, Assessment of regulatory obligations and risks, Preparation and submission of objections and grievances to competent authorities, Submission of extension requests and invoice processing, Preparation of legal memoranda and responses, Follow-up on the White Land Fees program platform and messages, Providing regulatory solutions to reduce or cancel fees, Legally representing the client before competent authorities"
     }
   },
   "clients": {
@@ -97,31 +103,37 @@
   "team": {
     "title": "Qefan Team",
     "subtitle": "Our team includes a group of distinguished specialists",
+    "learnMore": "Learn More",
+    "close": "Close",
     "member1": {
       "name": "Ibrahim bin Abdulaziz Al-Hussain",
       "roles": [
         "Licensed Lawyer & Founding Partner",
         "Commercial, Labor & Administrative Legal Consultant",
         "Arbitrator, Expert & Notary"
-      ]
+      ],
+      "description": "Licensed lawyer and founding partner holding a Master's degree in Sharia Policy from the Higher Institute of Judiciary. He holds the Sharia Consultant Fellowship in Islamic Finance Jurisprudence and Banking Dispute Resolution. He provides specialized legal consultations to companies and individuals in commercial, labor, and administrative fields. A certified arbitrator from appellate courts and a certified expert and notary. He possesses extensive experience in litigation and pleading before judicial authorities and committees, ensuring the delivery of precise and effective legal solutions to support compliance and protect client interests."
     },
     "member2": {
       "name": "Omar bin Ali Al-Doeelej",
       "roles": [
         "Licensed Lawyer & Founding Partner",
         "Expert in Real Estate Disputes & Partnership Conflicts"
-      ]
+      ],
+      "description": "Licensed lawyer and founding partner holding the ICCGo certificate and accredited in providing governance services from the London Academy of Governance and Compliance. A certified expert at the Ministry of Justice in providing legal services. He possesses extensive experience in real estate disputes and corporate conflicts, representing clients in real estate cases, real estate fund agreements, and real estate development, combining legal expertise with practical application to support the interests of individuals and companies."
     },
     "member3": {
       "name": "Omar bin Abdulrahman Al-Faifi",
       "roles": [
         "Licensed Lawyer & Founding Partner",
         "Corporate Governance, Risk Management & Compliance Expert"
-      ]
+      ],
+      "description": "Licensed lawyer with practical experience in several legal and consultancy firms, specializing in corporate governance, risk management, and compliance according to best global practices. He provides consultations and solutions that enhance effective governance, institutional compliance, and support business sustainability. He holds the ICCGO certificate in governance, risk management, and compliance, in addition to several professional certifications, enabling him to deliver comprehensive added value to companies and individuals."
     },
     "member4": {
       "name": "Khaled bin Mohammed Al-Harbi",
-      "roles": ["Licensed Lawyer", "Member of Technical Office - Previously"]
+      "roles": ["Licensed Lawyer", "Member of Technical Office - Previously", "Member of Multiple Specialized Committees"],
+      "description": "Licensed lawyer who practiced judicial work for years, accumulating deep expertise in studying and analyzing specialized cases and judicial decision-making. He holds a Master's degree in Comparative Jurisprudence and worked in the Technical Office for studying specialized cases and the Supreme Court, granting him advanced practical experience in supporting the highest judiciary and formulating sound legal opinions. He earned the trust of the judicial apparatus to represent it in international and local forums, and participated in specialized administrative and legislative committees, contributing to the development of judicial regulations and policies. He combines Sharia and legal knowledge with the ability to draft legislation and analyze regulations."
     },
     "member5": {
       "name": "Omar bin Abdulaziz Al-Sulaim",
@@ -129,7 +141,8 @@
         "Business Development & Oversight Expert",
         "Former Investigator & Public Prosecutor",
         "Legal Consultant"
-      ]
+      ],
+      "description": "Expert and practitioner in business development, policy and procedure building, inspection, and investigation, holding a Master's degree in Oversight. He worked as a legal consultant at the Vision Realization Office and served as supervisor and monitor of endowment entities at the General Authority for Endowments, in addition to his previous experience as an investigator and prosecutor at the Public Prosecution. He participated in numerous international conferences and courses in artificial intelligence and financial inspection according to IMF policies, combining legal, oversight, and technical expertise to support governance, compliance, and institutional development."
     },
     "member6": {
       "name": "Hisham bin Mohammed Al Sumaih",
@@ -137,7 +150,8 @@
         "Legal Consultant",
         "Member of Legislative & Administrative Committees",
         "Excellence Awards Recipient"
-      ]
+      ],
+      "description": "Judicial legal consultant with over ten years of practical judicial experience spanning criminal, personal status, and general courts. His career culminated at the Jeddah Court of Appeal, connected with administrative achievement and development from assistant to the president of the General Court in Riyadh to supervising the General Judiciary Unit at the Ministry's Agency for Judicial Affairs. He has participated in numerous judicial development committees and projects, delivered many training courses, and served as a certified trainer at the Judicial Training Center. He is also a certified arbitrator from the London Academy of Governance and Compliance."
     },
     "member7": {
       "name": "Fahad Al-Murshid",
@@ -145,7 +159,8 @@
         "Licensed Lawyer",
         "Governance & Risk Expert",
         "Legal Consultant in Insurance, Zakat & Tax"
-      ]
+      ],
+      "description": "Licensed lawyer with experience in several law firms, having represented companies in retail and contracting sectors and provided specialized consultations in legal and regulatory aspects. He holds the ICCGO certificate in governance and risk management and possesses qualified experience in providing consultations in cooperative insurance, zakat, and tax fields, enhancing his ability to provide clients with comprehensive legal solutions that support compliance and sustainable growth."
     },
     "member8": {
       "name": "Issa Khawaji",
@@ -153,7 +168,8 @@
         "Governance Consultant",
         "Executive Manager in Third Sector",
         "Certified Legal & Administrative Trainer"
-      ]
+      ],
+      "description": "Consultant and expert in entity governance, holding a Master's degree in Law. He possesses executive experience in managing several organizations in the non-profit sector and participated in drafting and building numerous regulations and policies, in addition to practical experience in developing comprehensive governance systems that enhance sustainability and transparency in the third sector. He also works as a certified trainer in the legal and administrative field, contributing to capacity building and institutional competency development."
     }
   },
   "contact": {
